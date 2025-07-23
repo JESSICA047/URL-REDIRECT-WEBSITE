@@ -1,7 +1,33 @@
-/* Basic Reset & Body Style */
-* {
+/* Basic Reset & Bodbody*/
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0a0a0a;
+  background-image: url("./1751906869459.png"),
+    linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #0a0a0a 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 500px, cover;
+  padding: 20px;
+
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  .logo {
+    width: 100%;
+    max-width: 280px;
+    /* margin-bottom: 25px; */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+  }
+
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  g: 0;
   box-sizing: border-box;
 }
 
@@ -11,66 +37,93 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #121212; /* Dark background */
+  background: #0a0a0a;
   background-image: linear-gradient(
     135deg,
-    #4a00e0 0%,
-    #8e2de2 50%,
-    #121212 50%
+    #1a1a1a 0%,
+    #2a2a2a 50%,
+    #0a0a0a 100%
   );
   padding: 20px;
 }
 
 /* The Main Card Container */
 .event-card {
-  background: rgba(25, 25, 25, 0.85); /* Semi-transparent dark card */
+  background: rgba(18, 18, 18, 0.85);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 40px 30px;
   text-align: center;
   color: #ffffff;
   width: 100%;
   max-width: 400px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  animation: cardFloat 3s ease-in-out infinite;
 }
 
-.logo {
-  width: 100px;
-  margin-bottom: 20px;
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .welcome-text {
-  font-size: 1rem;
-  color: #cccccc;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #b3b3b3;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
 }
 
 .event-title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 40px;
   letter-spacing: 1px;
-  background: linear-gradient(90deg, #8e2de2, #4a00e0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ec6629;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.event-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ffffff;
+  margin: 15px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* The All-Important Button */
 .cta-button {
   display: inline-block;
-  background: linear-gradient(90deg, #8e2de2, #4a00e0);
-  color: #ffffff;
-  padding: 15px 40px;
+  background: #ffffff;
+  color: #000000;
+  padding: 16px 40px;
   border-radius: 50px;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 700;
-  box-shadow: 0 4px 15px rgba(142, 45, 226, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .cta-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(142, 45, 226, 0.6);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #ec6629;
+  border: 2px solid #ffffff;
 }
