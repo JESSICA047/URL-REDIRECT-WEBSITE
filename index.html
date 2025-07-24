@@ -4,26 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the Last Friday Hangout</title>
+    <title>Last Friday Hangout</title>
+    <meta name="description"
+        content="Join the Last Friday Hangout – the future of networking. Participate in pre- and post-event surveys.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <div class="event-card">
-        <p class="welcome-text">Welcome to the Future of Networking</p>
-        <h1 class="event-title">Last Friday Hangout</h1>
-
-        <a id="pre-survey-btn" href="https://forms.gle/RzXpXsQrx3frJKFs8" class="cta-button"
-            style="margin-bottom: 15px; display: block;">
-            PRE-EVENT SURVEY
-        </a>
-        <a id="post-survey-btn" href="https://forms.gle/FhHFrpSFcTPz283R9" class="cta-button">
-            POST-EVENT SURVEY
-        </a>
-    </div>
+    <main class="event-main" aria-label="Event Card">
+        <section class="event-card" role="region" aria-labelledby="event-title">
+            <img src="./1751906869459.png" alt="Event Logo" class="event-logo" />
+            <p class="welcome-text">Welcome to the Future of Networking</p>
+            <h1 class="event-title" id="event-title">Last Friday Hangout</h1>
+            <a id="pre-survey-btn" href="https://forms.gle/RzXpXsQrx3frJKFs8" class="cta-button" target="_blank"
+                rel="noopener noreferrer" aria-label="Pre-Event Survey">
+                Pre-Event Survey
+            </a>
+            <a id="post-survey-btn" href="https://forms.gle/FhHFrpSFcTPz283R9" class="cta-button" target="_blank"
+                rel="noopener noreferrer" aria-label="Post-Event Survey">
+                Post-Event Survey
+            </a>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 
