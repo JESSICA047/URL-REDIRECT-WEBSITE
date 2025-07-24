@@ -122,7 +122,7 @@ body {
 
 .cta-button {
   display: block;
-  width: 100%;
+  width: 60%;
   background: var(--button-bg);
   color: var(--button-text);
   padding: 1rem 0;
